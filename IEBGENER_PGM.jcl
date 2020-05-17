@@ -30,3 +30,19 @@ MEMBER NAME=MEMBER1
 //SYSIN DD DUMMY
 /*
 //********************************************************************************
+//----------Copy a PS---------
+//STEP1 EXEC PGM=IEBGENER
+//SYSUT1 DD DSN=Z51555.COURSE.PS1,DISP=SHR           <------ INPUT DATASET
+//SYSUT2 DD DSN=Z51555.COURSE.PS2,DISP=SHR           <------ OUTPUT DATASET
+//SYSIN DD DUMMY
+/*
+//********************************************************************************
+//----------Merge PS datasets---------
+//STEP1 EXEC PGM=IEBGENER
+//SYSUT1 DD DSN=Z51555.COURSE.PS1,DISP=SHR           <------ INPUT DATASET
+// DD DSN=Z51555.COURSE.PS2,DISP=SHR                 <------ INPUT DATASET
+// DD DSN=Z51555.COURSE.PS3,DISP=SHR                 <------ INPUT DATASET
+//SYSUT2 DD DSN=Z51555.COURSE.PS4,DISP=SHR           <------ OUTPUT DATASET
+//SYSIN DD DUMMY
+/*
+//********************************************************************************
